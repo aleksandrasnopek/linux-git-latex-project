@@ -1,0 +1,13 @@
+# LaTex
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# System
+.DS_Store
+
+# Virtual env
+venv/
+env/
