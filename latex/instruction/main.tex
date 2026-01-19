@@ -5,6 +5,7 @@
 \usepackage[polish]{babel}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{hyperref}
 
 \geometry{margin=2.5cm}
@@ -23,77 +24,95 @@ Niniejsza instrukcja opisuje szczegółowo obsługę aplikacji GitHub Desktop.
 Przedstawia proces logowania, klonowania repozytorium, wprowadzania zmian,
 tworzenia commitów, synchronizacji z repozytorium zdalnym oraz tworzenia Pull Request.
 
-\section{Logowanie do GitHub Desktop}
-Po uruchomieniu aplikacji GitHub Desktop użytkownik musi zalogować się
-na swoje konto GitHub.
+\subsection{Logowanie do GitHub Desktop}
+Po uruchomieniu aplikacji GitHub Desktop użytkownik musi zalogować się na swoje konto GitHub.
+Proces logowania polega na autoryzacji aplikacji poprzez przeglądarkę internetową.
+Po poprawnym zalogowaniu aplikacja uzyskuje dostęp do repozytoriów użytkownika.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{screenshots/login.png}
+\includegraphics[width=0.9\textwidth]{screenshots/login.png}
 \caption{Logowanie do aplikacji GitHub Desktop}
 \end{figure}
 
-\section{Klonowanie repozytorium}
-Po zalogowaniu należy wybrać opcję \textit{Clone a repository},
-a następnie wskazać repozytorium oraz lokalizację na dysku.
+\subsection{Klonowanie repozytorium}
+Po zalogowaniu użytkownik może sklonować istniejące repozytorium z platformy GitHub.
+W tym celu należy wybrać opcję \textit{Clone a repository} oraz wskazać repozytorium,
+które ma zostać pobrane na komputer lokalny.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{screenshots/clone2.png}
-\caption{Wybór repozytorium do klonowania}
+\includegraphics[width=0.9\textwidth]{screenshots/clone2.png}
+\caption{Okno klonowania repozytorium}
 \end{figure}
 
-\begin{figure}[h]
+
+\subsection{Widok repozytorium po klonowaniu}
+Po zakończeniu procesu klonowania aplikacja wyświetla główny widok repozytorium.
+Użytkownik może w nim zobaczyć aktualną gałąź, listę plików oraz historię zmian.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{screenshots/repo_view.png}
-\caption{Widok repozytorium po klonowaniu}
+\includegraphics[width=0.9\textwidth]{screenshots/repo_view.png}
+\caption{Widok repozytorium po sklonowaniu}
 \end{figure}
 
-\section{Wprowadzanie zmian w projekcie}
-Po otwarciu repozytorium użytkownik może edytować pliki projektu.
-GitHub Desktop automatycznie wykrywa wszystkie zmiany.
 
-\begin{figure}[h]
+\subsection{Wykrywanie zmian w plikach}
+Po wprowadzeniu zmian w plikach projektu aplikacja GitHub Desktop automatycznie je wykrywa
+i prezentuje na liście zmian. Użytkownik może przejrzeć zmodyfikowane pliki przed wykonaniem commita.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{screenshots/changes2.png}
-\caption{Wykryte zmiany w plikach projektu}
+\includegraphics[width=0.9\textwidth]{screenshots/changes2.png}
+\caption{Wykryte zmiany w plikach}
 \end{figure}
 
-\section{Tworzenie commitów}
-Commit zapisuje aktualny stan projektu wraz z opisem wprowadzonych zmian.
-Aby go utworzyć, należy wpisać krótki komunikat i zatwierdzić zmiany.
 
-\begin{figure}[h]
+\subsection{Tworzenie commita}
+Aby zapisać zmiany w lokalnym repozytorium, użytkownik tworzy commit.
+W tym celu należy podać krótki opis zmian (commit message) oraz zatwierdzić operację.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{screenshots/commit.png}
-\caption{Tworzenie commita}
+\includegraphics[width=0.9\textwidth]{screenshots/commit.png}
+\caption{Tworzenie commita w GitHub Desktop}
 \end{figure}
 
-\begin{figure}[h]
+
+\subsection{Historia commitów}
+Aplikacja GitHub Desktop umożliwia przeglądanie historii commitów,
+co pozwala na analizę wprowadzonych zmian oraz identyfikację autorów poszczególnych operacji.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{screenshots/history.png}
-\caption{Historia commitów w GitHub Desktop}
+\includegraphics[width=0.9\textwidth]{screenshots/history.png}
+\caption{Historia commitów}
 \end{figure}
 
-\section{Wysyłanie zmian do repozytorium zdalnego}
-Po wykonaniu commitów zmiany znajdują się lokalnie.
-Opcja \textit{Push origin} umożliwia ich wysłanie do repozytorium zdalnego.
 
-\begin{figure}[h]
+\subsection{Wysyłanie zmian do GitHuba}
+Po wykonaniu commitów zmiany mogą zostać wysłane do zdalnego repozytorium na platformie GitHub
+za pomocą operacji \textit{Push}. Synchronizuje to lokalne zmiany z repozytorium zdalnym.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{screenshots/push.png}
-\caption{Wysyłanie zmian do GitHuba}
+\includegraphics[width=0.9\textwidth]{screenshots/push.png}
+\caption{Wysyłanie zmian do repozytorium zdalnego}
 \end{figure}
 
-\section{Tworzenie Pull Request}
-Pull Request służy do połączenia zmian z gałęzi roboczej
-z gałęzią główną repozytorium.
 
-\begin{figure}[h]
+\subsection{Tworzenie Pull Request}
+Pull Request służy do zgłoszenia zmian do połączenia z inną gałęzią repozytorium,
+najczęściej z gałęzią \texttt{develop} do \texttt{main}.
+Proces ten umożliwia przegląd zmian przed ich ostatecznym scaleniem.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{screenshots/pullrequest.png}
+\includegraphics[width=0.9\textwidth]{screenshots/pullrequest.png}
 \caption{Tworzenie Pull Request}
 \end{figure}
+
 
 \section{Podsumowanie}
 GitHub Desktop umożliwia intuicyjną pracę z systemem kontroli wersji Git.
